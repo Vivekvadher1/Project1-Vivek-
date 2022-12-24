@@ -1,3 +1,5 @@
+/* The "axios-hooks" is used for the passing http request to the react application */
+
 import * as React from 'react';
 import  { useState}  from 'react';
 import { 
@@ -9,10 +11,11 @@ import {
    ImageList,
    ImageListItem
     } from '@mui/material';
+
 import useAxios from 'axios-hooks'
  
-const c_username = "Vivek";
-const c_password = "123456";
+const c_username = "Vivek";                         //set the default user name
+const c_password = "123456";                       //set the default password
 
 export default function Login() {
 
@@ -20,7 +23,7 @@ export default function Login() {
   const [password, setPassword] = useState();
 
  
-let login_object={
+let login_object={                           
   username:username,
   password:password
 }
@@ -36,6 +39,7 @@ let login_object={
   },
   { manual: true }
 )
+
 if(loginData){
   console.log(loginData)
   if(loginData.name){
@@ -72,16 +76,19 @@ if(loginData){
                 </Typography>
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                 <TextField id="outlined-basic"
                 label="User Name"
                 variant="outlined" 
                 margin="normal"
-                onChange={(e)=>{setUsername(e.target.value);console.log(e.target.value)}}
+                onChange={(e)=>{
+                  setUsername(e.target.value);
+                  console.log(e.target.value)
+                }}
                 />
                 </Grid>
 
-                <Grid item xs={12}>      
+                <Grid item xs={12} >      
                 <TextField id="outlined-basic"
                       label="Password"
                       type="password" 
@@ -94,7 +101,7 @@ if(loginData){
                       />
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                 <Button style={{
                                   borderRadius: 20,
                                   backgroundColor: "black",

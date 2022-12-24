@@ -4,8 +4,9 @@ import Button from '@mui/material/Button';
 
 export default function BoxComponent() {
   return (
-    <Box mt={2} component="span" sx={{ p: 3, border: '2px dashed black' }}>
+    <Box component="span" sx={{ p: 6, border: '4px dashed black',margin: 6}}>
       <Button>Save Me!!!</Button>
+      
     </Box>
   );
 }

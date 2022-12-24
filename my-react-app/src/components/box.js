@@ -5,14 +5,17 @@ export default function BoxSx() {
   return (
     <Box 
       sx={{
-        width: 100,
-        height: 100,
-        backgroundColor: 'primary.dark',
+        width: 400,
+        height: 400,
+        margin : 10,
+        backgroundColor: 'grey',
+        
         '&:hover': {
-          backgroundColor: 'primary.main',
+          backgroundColor: 'black',
           opacity: [0.9, 0.8, 0.7],
         },
       }}
     />
+    
   );
 }
